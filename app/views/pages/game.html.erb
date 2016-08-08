@@ -1,0 +1,7 @@
+<h1><%= session[:grid].join(' ') %></h1>
+
+<form action="/score">
+  <label for="guessing">Guess</label>
+  <input type="text hidden" id="guessing" name="guess" placeholder="what is your best guess?">
+  <input type="submit" value="Go on!">
+</form>

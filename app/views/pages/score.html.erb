@@ -1,0 +1,13 @@
+<% if (@match && @real_word) %>
+  <%= session[:scores].last %>
+  <p>Number of sessions played: <%= session[:games_nb] %></p>
+  <p>Average score: <%= session[:scores_avg] %></p>
+<% elsif not @real_word %>
+  <p>Your word doesn't even exist bitch<p>
+<% else %>
+  <p>Your word doesn't match the grid<p>
+<% end %>
+
+<form action="/game">
+  <input type="submit" value="Play again">
+</form>
